@@ -1,0 +1,69 @@
+.hero {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+
+    @include breakpoint(medium) {
+        padding-bottom: (3 * $global-margin);
+    }
+
+    &.hero--stripe {
+        padding-bottom: 0;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: block;
+            width: 100vw;
+            height: 100%;
+            background-color: $body-background;
+            z-index: 2;
+            transform-origin: 100% 100%;
+            transform: skewY(2deg);
+        }
+    }
+
+    &__image {
+        display: block;
+        height: 50vw;
+        background-size: cover;
+
+        @include breakpoint(medium) {
+            height: 36vw;
+        }
+    }
+
+    &__caption-wrapper {
+        position: relative;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+        &__caption {
+            padding: $global-padding;
+            background-color: $black;
+
+            @include breakpoint(medium) {
+                position: absolute;
+                left: $global-position;
+                bottom: (-3 * $global-margin);
+                max-width: 200px;
+            }
+
+            @include breakpoint(large) {
+                left: (-3 * $global-margin);
+            }
+
+            p {
+                font-family: $header-font-family;
+                font-size: rem-calc(17);
+                color: $white;
+            }
+
+            .button {
+                margin-bottom: 0;
+            }
+        }
+}

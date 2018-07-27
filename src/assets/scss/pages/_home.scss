@@ -1,0 +1,336 @@
+// Sections
+.home-section {
+    &__container {
+        padding-top: (2 * $global-padding);
+        padding-bottom: (2 * $global-padding);
+        position: relative;
+    }
+
+        &__header {
+            position: relative;
+        }
+
+            &__title-icon {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 25px;
+                transform: translateY(-50%);
+
+                img {
+                    display: block;
+                    max-width: 100%;
+                    height: auto;
+                }
+
+                & + .home-section__title {
+                    padding-left: 30px;
+                }
+            }
+
+            &__title {
+                margin-bottom: $global-margin;
+                font-size: rem-calc(20);
+                font-weight: bold;
+            }
+}
+
+
+// Section -> ABOUT
+.home-about {
+    position: relative;
+    overflow: hidden;
+
+    @include breakpoint(medium) {
+        margin-top: (-3 * $global-margin);
+    }
+
+    .home-section__container {
+        padding-bottom: (5 * $global-padding);
+
+        @include breakpoint(medium) {
+            padding-top: (5 * $global-padding);
+            padding-bottom: (9 * $global-padding);
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            width: 200vw;
+            background-color: $white;
+            border-bottom: $global-padding solid get-color(detail);
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+    }
+
+        &__header {
+            max-width: 500px;
+
+            .home-section__title {
+                display: block;
+                max-width: 350px;
+            }
+        }
+
+        &__list {
+            padding: (2 * $global-padding);
+
+            &__item {
+                margin-bottom: (2 * $global-margin);
+
+                figure {
+                    width: calc(75px + (2 * #{$global-padding}));
+                    padding-right: (2 * $global-padding);
+                }
+
+                span > span {
+                    display: block;
+                }
+
+                &--featured {
+                    color: $black;
+
+                    span > span {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        &__cta {
+            @include breakpoint(medium) {
+                position: absolute;
+                top: 0;
+                right: $global-position;
+            }
+
+            .button {
+                width: 100%;
+
+                @include breakpoint(medium) {
+                    width: auto;
+                }
+            }
+        }
+}
+
+
+// Section -> Testimonials
+.home-testimonials {
+    margin-top: (-4 * $global-padding);
+    
+    @include breakpoint(medium) {
+        margin-top: (-8 * $global-padding);
+    }
+
+    .orbit-previous,
+    .orbit-next {
+        display: none;
+        font-size: 1.5rem;
+        color: $dark-gray;
+
+        @include breakpoint(medium) {
+            display: block;
+        }
+    }
+    
+    .orbit-previous {
+        transform: translate(-150%, -50%);
+    }
+
+    .orbit-next {
+        transform: translate(150%, -50%);
+    }
+
+    .orbit-slide {
+        display: flex;
+        padding: 5px;
+        min-height: 100%;
+
+        &.is-active,
+        &.slide-out-right,
+        &.slide-out-left {
+            display: flex!important;
+        }
+    }
+
+    .orbit-bullets {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        button {
+            width: rem-calc(8);
+            height: rem-calc(8);
+            background-color: $medium-gray;
+            border: 1px solid $dark-gray;
+
+            &.is-active {
+                background-color: $white;
+                border-color: get-color(detail);
+            }
+        }
+    }
+
+    &__container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+        &__content {
+            margin: 0 auto;
+            max-width: 560px;
+        }
+}
+
+.home-testimonial {
+    padding: (2 * $global-padding) (3 * $global-padding) (4 * $global-padding);
+    background-color: $white;
+    box-shadow: 0 0 2px rgba($color: $black, $alpha: 0.1);
+
+    @include breakpoint(medium) {
+        padding: (3 * $global-padding) (8 * $global-padding) (4 * $global-padding);
+    }
+
+    p {
+        font-style: italic;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+
+    &__avatar {
+        display: block;
+        margin: 0 auto (2 * $global-margin);
+        width: 110px;
+        height: 110px;
+        border-radius: 100%;
+        overflow: hidden;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__owner {
+        display: block;
+        margin-top: (2 * $global-margin);
+
+        &__name,
+        &__about {
+            display: block;
+            font-size: rem-calc(20);
+            font-style: italic;
+            font-weight: 300;
+            line-height: 1.2;
+            color: rgba($color: $body-font-color, $alpha: 0.5);
+        }
+    }
+}
+
+
+// Section -> Steps
+.home-steps {
+    margin-top: (-4 * $global-padding);
+    padding-top: (5 * $global-padding);
+    background-color: $white;
+
+    &__list {
+        position: relative;
+        margin-top: (5 * $global-margin);
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 45px;
+            right: 75px;
+            left: 75px;
+            display: none;
+            border-bottom: 1px solid $dark-gray;
+
+            @include breakpoint(medium) {
+                display: block;
+            }
+        }
+    }
+
+        &__item {
+            position: relative;
+            margin-bottom: (2 * $global-margin);
+            font-weight: 300;
+            z-index: 2;
+
+            @include breakpoint(medium) {
+                max-width: 150px;
+            }
+
+            &__number {
+                position: relative;
+                display: block;
+                margin: 0 auto (2 * $global-margin);
+                width: 90px;
+                height: 90px;
+                font-family: $header-font-family;
+                font-weight: bold;
+                line-height: 1;
+                border-radius: 100%;
+                border: 1px solid $dark-gray;
+                background-color: $white;
+
+                > span {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+}
+
+
+// Section -> CTA
+.home-cta {
+    &__content {
+        max-width: 745px;
+        margin: 0 auto;
+        padding: (2.5 * $global-padding);
+        background-color: $white;
+    }
+
+        &__title {
+            color: get-color(success);
+        }
+
+        &__sub-title {
+            font-family: $body-font-family;
+            font-size: rem-calc(20);
+            font-weight: 300;
+        }
+
+        &__banner {
+            a {
+                display: inline-block;
+                transition: all 0.2s;
+
+                &:hover {
+                    box-shadow: 0 0 2px rgba($color: $black, $alpha: 0.3);
+                }
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                max-width: 260px;
+            }
+        }
+}

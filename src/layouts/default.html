@@ -1,0 +1,26 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-End Challenge</title>
+
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700|Roboto:300,300i,400,400i,700,700i">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  </head>
+  <body>
+
+    {{> header}}
+
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+    {{> body}}
+
+    {{> footer}}
+
+    <script src="{{root}}assets/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+.footer {
+    padding: (3 * $global-padding) 0;
+    background-color: get-color(main);
+    border-bottom: $global-padding solid get-color(detail);
+
+    &__grid {
+        position: relative;
+    }
+
+    &__col {
+        + .footer__col {
+            margin-top: (2 * $global-margin);
+
+            @include breakpoint(medium) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__title,
+    &__sub-title {
+        font-family: $body-font-family;
+        color: $white;
+    }
+
+    &__ctas {
+        margin-bottom: (2 * $global-margin);
+
+        .button {
+            width: 100%;
+
+            @include breakpoint(medium) {
+                width: auto;
+            }
+        }
+    }
+
+    &__copyright {
+        display: block;
+        width: 100%;
+        color: $white;
+    }
+
+    &__trust-sign {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .cell {
+        @include flex-align-self(top);
+    }
+
+    .menu {
+        a {
+            padding: ($global-padding / 2) 0;
+            font-family: $body-font-family;
+            color: $white;
+        }
+
+        + .menu {
+            margin: (2 * $global-margin) 0;
+
+            @include breakpoint(medium) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

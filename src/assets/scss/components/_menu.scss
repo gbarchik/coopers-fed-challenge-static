@@ -1,0 +1,27 @@
+.menu {
+    font-family: $header-font-family;
+
+    &__facebook-icon {
+        position: relative;
+        font-size: 1.25em;
+        color: get-color(facebook);
+
+        &:before {
+            position: relative;
+            z-index: 2;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            bottom: 1px;
+            left: 1px;
+            background-color: $white;
+            border-radius: 1px;
+            z-index: 1;
+        }
+    }
+}

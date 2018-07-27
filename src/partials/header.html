@@ -1,0 +1,73 @@
+<header class="[ header ]" role="banner" data-sticky data-margin-top="0">
+    <div class="[ header__container ] [ grid-container ]">
+        <div class="[ header__grid ] [ grid-x ] [ align-middle align-justify ]">
+            <div class="[ header__brand ] [ cell large-3 shrink ]">
+                <h2 class="[ brand ]">
+                    <a class="[ text-hide ]" href="/" title="Front-End Challenge">
+                        <img src="{{root}}assets/img/front-end-challenge-logo.svg" alt="Front-End Challenge"> Front-End Challenge
+                    </a>
+                </h2>
+                <!-- / .brand -->
+            </div>
+            <!-- / .header__brand -->
+
+            <div class="[ header__navigation ] [ cell shrink large-auto ]">
+                <button class="[ menu-icon hide-for-large ]" type="button" data-toggle="offCanvasLeft">
+                    <span class="[ show-for-sr ]">Abrir menu</span>
+                </button>
+
+                <div class="[ header__off-canvas ] [ off-canvas in-canvas-for-large position-left ] [ grid-container ]" id="offCanvasLeft"
+                    data-off-canvas data-auto-focus="false">
+                    <div class="[ header__off-canvas__container ] [ grid-x ]">
+                        <div class="[ header__off-canvas__header ] [ cell ] [ hide-for-large ]">
+                            <h2 class="[ brand ]">
+                                <a class="[ text-hide ]" href="/" title="Front-End Challenge">
+                                    <img src="{{root}}assets/img/front-end-challenge-logo.svg" alt="Front-End Challenge"> Front-End Challenge
+                                </a>
+                            </h2>
+                            <!-- / .brand -->
+                        </div>
+                        <!-- / .header__off-canvas__header -->
+
+                        <nav class="[ header__main-nav ] [ cell large-auto ]">
+                            <ul class="[ menu vertical ]">
+                                <li>
+                                    <a href="#">Cursos</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blog</a>
+                                </li>
+                                <li{{#ifpage 'contact'}} class="is-active"{{/ifpage}}>
+                                    <a href="/contact.html">Contato</a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="[ menu__facebook-icon ] [ fab fa-facebook-square ]"></i>
+                                        <span class="[ show-for-sr ]">Facebook</span>
+                                    </a>
+                                </li>
+                                <!-- TODO: Add Icon -> Use `text-hide` class -->
+                            </ul>
+                            <!-- / .menu -->
+                        </nav>
+                        <!-- / .header__main-nav -->
+
+                        <div class="[ header__aside-nav ] [ cell large-shrink ]">
+                            <a href="#" class="[ button secondary clear ]">Área do Aluno</a>
+                            <a href="#" class="[ button ] [ text-uppercase ]">Inscreva-se</a>
+                        </div>
+                        <!-- / .header__aside-nav -->
+                    </div>
+                    <!-- / .header__off-canvas__container -->
+                </div>
+                <!-- / .header__off-canvas -->
+            </div>
+            <!-- / .header__navigation -->
+        </div>
+        <!-- / .header__grid -->
+    </div>
+    <!-- / .header__container -->
+</header>
+<!-- / .header -->
+
+<main class="[ content ]">

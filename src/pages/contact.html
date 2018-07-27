@@ -1,0 +1,128 @@
+{{> hero}}
+
+<section class="[ contact ] [ page__container ] [ grid-container ]">
+    <div class="[ page__content ] [ grid-x ]">
+        <div class="[ page__column ] [ cell medium-4 ]">
+            <header class="[ page__header ]">
+                <h1 class="[ page__title ]">
+                    <small>Faça sua</small>
+                    <span>Inscrição</span>
+                </h1>
+                <p>Ao fazer sua inscrição, você garantirá acesso a muito conteúdo de alta qualidade. O custo é ZERO! Vamos lá?</p>
+            </header>
+            <!-- / .page__header -->
+        </div>
+        <!-- / .page__column -->
+
+        <div class="[ page-column ] [ cell medium-7 medium-offset-1 ]">
+            <form class="[ contact-form ] [ js-contact-form ]" action="" data-abide novalidate>
+                <header class="[ contact-form__header ]">
+                    <span class="[ contact-form__title ]">Passo <span class="[ js-contact-form__tab-number ]">1</span> de 2</span>
+
+                    <span class="[ contact-form__bullets ]" data-tabs id="formTab">
+                        <i class="[ contact-form__bullet ] [ tabs-title ] [ js-contact-form__tab-bullet ] is-active" data-tab-bullet="0"><a href="#firstStep"></a></a></i>
+                        <i class="[ contact-form__bullet ] [ tabs-title ] [ js-contact-form__tab-bullet ]" data-tab-bullet="1"><a href="#secondStep"></a></a></i>
+                    </span><!-- / .contact-form__bullets -->
+                </header><!-- / .contact-form__header -->
+
+                <div data-tabs-content="formTab">
+                    <div class="[ contact-form__tab ] [ tabs-panel ] [ js-contact-form__panels ] [ grid-x grid-margin-x ] is-active" id="firstStep">
+                        <div class="[ cell medium-5 ]">
+                            <label>
+                                <strong class="[ contact-form__label ]">* Nome:</strong>
+                                <input type="text" name="name" aria-errormessage="contactName" required>
+                                <span class="[ form-error ]" id="contactName">Hey, o campo nome é obrigatório!</span>
+                            </label>
+                        </div>
+
+                        <div class="[ cell medium-7 ]">
+                            <label>
+                                <strong class="[ contact-form__label ]">* Seu e-mail:</strong>
+                                <input type="email" name="email" aria-errormessage="contactEmail" pattern="email" required>
+                                <span class="[ form-error ]" id="contactEmail">Entre com o seu e-mail!</span>
+                            </label>
+                        </div>
+
+                        <div class="[ cell medium-4 ]">
+                            <label>
+                                <strong class="[ contact-form__label ]">* Telefone:</strong>
+                                <input class="[ js-mask-phone ]" type="text" name="phone" data-validator="br_phone_number" aria-errormessage="contactPhone" required>
+                                <span class="[ form-error ]" id="contactPhone">Verifique o seu telefone!</span>
+                            </label>
+                        </div>
+
+                        <div class="[ cell medium-7 medium-offset-1 ]">
+                            <label>
+                                <strong class="[ contact-form__label ]">* Campo de atuação profissional:</strong>
+                                <select name="job" required aria-errormessage="contactJob">
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="Lorem">Lorem</option>
+                                    <option value="Ipsum">Ipsum</option>
+                                </select>
+                                <span class="[ form-error ]" id="contactJob">Selecione um campo!</span>
+                            </label>
+                        </div>
+
+                        <div class="[ cell medium-5 ]">
+                            <label>
+                                <strong class="[ contact-form__label ]">* Cat. carteira motorista:</strong>
+                                <select name="license" required aria-errormessage="contactLicense">
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="Lorem">Lorem</option>
+                                    <option value="Ipsum">Ipsum</option>
+                                </select>
+                                <span class="[ form-error ]" id="contactLicense">Qual é a categoria da sua CNH?</span>
+                            </label>
+                        </div>
+
+                        <fieldset class="[ cell medium-7 ]">
+                            <legend>
+                                <strong class="[ contact-form__label ]">* Gênero:</strong>
+                            </legend>
+                            <input type="radio" name="gender" value="Masculino" id="genderMale" required selected>
+                            <label for="genderMale">Masculino</label>
+                            <input type="radio" name="gender" value="Feminino" id="genderFem" required>
+                            <label for="genderFem">Feminino</label>
+                        </fieldset>
+
+                        <div class="[ cell ]">
+                            <button type="button" class="[ button ] [ js-contact-form__next-button ] [ text-uppercase ]">Continuar</button>
+                        </div>
+                    </div>
+                    <!-- / .contact-form__tab -->
+
+                    <div class="[ contact-form__tab ] [ tabs-panel ] [ js-contact-form__panels ] [ grid-x grid-margin-x ]" id="secondStep">
+                        <div class="[ cell medium-5 ]">
+                            <label>
+                                <strong class="[ contact-form__label ]">* CPF:</strong>
+                                <input class="[ js-mask-cpf ]" type="text" name="cpf" data-validator="cpf" required aria-errormessage="contactCPF">
+                                <span class="[ form-error ]" id="contactCPF">Ops, verifique o seu CPF!</span>
+                            </label>
+                        </div>
+
+                        <div class="[ cell medium-8 ]">
+                            <label>
+                                <strong class="[ contact-form__label ]">* Senha:</strong>
+                                <input type="password" name="password" required aria-errormessage="contactPass">
+                                <span class="[ form-error ]" id="contactPass">Hey, você precisa de uma senha!</span>
+                            </label>
+                        </div>
+
+                        <div class="[ cell ]">
+                            <button type="submit" class="[ button ] [ text-uppercase ]">Finalizar</button>
+                        </div>
+                    </div>
+                    <!-- / .contact-form__tab -->
+                </div>
+            </form>
+            <!-- / .contact-form -->
+
+            <div class="[ contact-form__message ] [ js-contact-form__message ] [ callout small ]">
+            </div>
+            <!-- / .contact-form__message -->
+        </div>
+        <!-- / .page__column -->
+    </div>
+    <!-- / .page__content -->
+</section>
+<!-- / .page__container -->
